@@ -1,0 +1,90 @@
+<div class="text-center my-3">
+    <div>
+        <h1>REGISTRO FORMULARIO</h1>
+    </div>
+    <div>
+        <form>
+            <div class="my-5">
+                <div>
+                    <label for="name">Nombre y apellidos</label>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input class="input-group input-group-sm mb-3 w-50" type="text"  [(ngModel)]="nombre" name="nombre">
+                </div>
+                <span class="text-danger" *ngIf="nombre == '' " >Introduzca nombre y apellidos</span>
+
+                <div>
+                    <label >Telefono</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input class="input-group input-group-sm mb-3 w-50" type="text" [(ngModel)]="telefono" name="telefono" >
+                </div>
+                <span class="text-danger" *ngIf="telefono == '' " >Introduzca telefono</span>
+
+                <div>
+                    <label >correo</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="email" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="correo" name="correo">
+                </div>
+                <span class="text-danger" *ngIf="correo == '' " >Introduzca correo</span>
+
+                <div class="d-flex justify-content-center">
+                    <label >direccion</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="text" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="direccion" name="direccion">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <label >localidad</label>
+                </div>
+                <div class="d-flex justify-content-center" >
+                    <input type="text" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="localidad" name="localidad">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <label >provincia</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="text" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="provincia" name="provincia">
+                </div>
+                <div>
+                    <label >contraseña</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="text" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="contrasena" name="contrasena">
+                </div>
+                <span class="text-danger" *ngIf="contrasena === '' " >Introduzca contraseña</span>
+
+                <div>
+                    <label >repetir contraseña</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="text" class="input-group input-group-sm mb-3 w-50" [(ngModel)]="repetirContrasena" name="repetirContrasena">
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                    <label class="custom-control-label" for="customCheck1">Acepta los terminos</label>
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" [(ngModel)]="terminos" name="terminos">
+
+                  </div>
+            </div>
+            <div class="d-flex justify-content-center " >
+                <div class="mx-2">
+                    <button type="text" class="btn btn-success" (click)="validationForm()">Registrar</button>
+
+                </div>
+                <div>
+                    <a [routerLink]="'/'">
+                        <button type="text" class="btn btn-primary" >Login</button>
+
+
+                    </a>
+
+                </div>
+            </div>
+          
+
+        </form>
+    </div>
+</div>
